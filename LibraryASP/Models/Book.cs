@@ -11,14 +11,15 @@ namespace LibraryASP.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
+
         [StringLength(50, MinimumLength = 3)]
         public string Title{ get; set; }
+
         [StringLength(50, MinimumLength = 3)]
-
         public string Author { get; set; }
-       
 
-        public Boolean Available { get; set; }
+
+        public Boolean Available { get; set; } =true;
         
 }
 }
