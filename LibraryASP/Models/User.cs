@@ -23,6 +23,7 @@ namespace LibraryASP.Models
        
 
         [ForeignKey("Book")]
+        //grne
       //  [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int B_borrowed { get; set; }
 
