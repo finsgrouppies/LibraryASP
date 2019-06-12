@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -19,9 +20,12 @@ namespace LibraryASP.Models
             public string LName { get; set; }
 
 
-        
-            public int  Bookborrowed { get; set; }
+        [ForeignKey("Book")]
+        public int B_borrowed { get; set; }
 
+        public virtual Book Book { get; set; }
+
+        
             
         }
     }
