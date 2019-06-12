@@ -7,18 +7,31 @@ using System.Web;
 
 namespace LibraryASP.Models
 {
-    public class Book
+    public class User
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int BookID { get; set; }
+        public int UserID { get; set; }
+
+     
+
         [StringLength(50, MinimumLength = 3)]
-        public string Title{ get; set; }
-        [StringLength(50, MinimumLength = 3)]
-
-        public string Author { get; set; }
-
-
-        public Boolean Available { get; set; } = true;
+        public string Fname { get; set; }
         
+
+        [StringLength(50, MinimumLength = 3)]
+        public string Lname { get; set; }
+       
+
+        [ForeignKey("Book")]
+      //  [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int B_borrowed { get; set; }
+
+        public virtual Book Book { get; set; }
+
+
+
+
+
+
     }
 }
