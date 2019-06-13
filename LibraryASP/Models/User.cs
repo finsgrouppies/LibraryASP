@@ -9,7 +9,7 @@ namespace LibraryASP.Models
 {
     public class User
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int UserID { get; set; }
 
      
@@ -25,7 +25,7 @@ namespace LibraryASP.Models
         [ForeignKey("Book")]
         //grne
       //  [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int B_borrowed { get; set; }
+        public int? B_borrowed { get; set; }
 
         public virtual Book Book { get; set; }
 
