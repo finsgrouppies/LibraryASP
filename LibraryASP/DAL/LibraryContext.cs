@@ -21,5 +21,7 @@ namespace LibraryASP.DAL
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
+
+        public System.Data.Entity.DbSet<LibraryASP.Models.Lend> Lends { get; set; }
     }
 }
